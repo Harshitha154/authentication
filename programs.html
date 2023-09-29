@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>programs</h4>
+</body>
+</html>
+<script>
+    //area of triangle
+    const a = 5;
+    const b = 6;
+    const c = 7;
+    const s = (a + b + c) / 2;
+    const Area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    console.log(`The area of the triangle with sides ${a}, ${b}, and ${c} is ${Area}`);
+    //leap year
+    const year=2024
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+           if (yearToCheck % 400 === 0) {
+            console.log(`${year} is a leap year.`);
+        } else {
+            console.log(`${year} is not a leap year.`);
+        }
+    }
+        else{
+            console.log(`not leap year`);
+        
+        }
+    }
+//sunday
+    for (let year = 2014; year <= 2050; year++) {
+        const d = new Date(year, 0, 1);
+    if (d.getDay() === 0) {
+        console.log(`1st January is being a Sunday in ${year}`);
+    }
+}
+//christmas
+    let today = new Date();
+    let christmas = new Date(today.getFullYear(), 11, 25);
+    let days = christmas - today;
+    let remainingdays= Math.ceil(days / (1000 * 60 * 60 * 24));
+    console.log(`There are ${remainingdays} days left`);
+
+//object equal
+  let obj1 = {
+  name: "harshitha",
+  age: 19,
+};
+
+   let obj2 = {
+  name: "harshitha",
+  age: 90,
+};
+let res = Object.keys(obj2).every(key => obj1.hasOwnProperty(key) && obj1[key] === obj2[key]);
+console.log(res); 
+//sorting alphabets
+const string = 'webmaster';
+const characters = string.split('');
+characters.sort();
+const sortedString = characters.join('');
+console.log(sortedString); 
+//array
+ let array=[1,2,3,4,5];
+ array.sort()
+ console.log(array[1],array[3]);
+
+
+</script>
